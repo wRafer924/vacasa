@@ -221,7 +221,7 @@ class Select2MultipleWidget(Select2Mixin, forms.SelectMultiple):
 
 class Select2TagWidget(Select2TagMixin, Select2Mixin, forms.SelectMultiple):
     """
-    Select2 drop in widget for for tagging.
+    Select2 drop in widget with tagging support. It allows to dynamically create new options from text input by the user.
 
     Example for :class:`.django.contrib.postgres.fields.ArrayField`::
 
