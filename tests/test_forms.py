@@ -188,6 +188,7 @@ class TestSelect2AdminMixin:
         assert tuple(Select2AdminMixin().media._js) == (
             "admin/js/vendor/select2/select2.full.min.js",
             "admin/js/vendor/select2/i18n/en.js",
+            "admin/js/jquery.init.js",
             "django_select2/django_select2.js",
         )
 

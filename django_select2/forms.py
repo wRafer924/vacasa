@@ -169,8 +169,12 @@ class Select2AdminMixin:
     def media(self):
         css = {**AutocompleteMixin(None, None).media._css}
         css["screen"].append("django_select2/django_select2.css")
+        js = [*Select2Mixin().media._js]
+        js.insert(
+            js.index("django_select2/django_select2.js"), "admin/js/jquery.init.js"
+        )
         return forms.Media(
-            js=Select2Mixin().media._js,
+            js=js,
             css=css,
         )
 
